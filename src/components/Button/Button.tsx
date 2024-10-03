@@ -3,7 +3,7 @@ import "./Button.scss";
 
 type ButtonProps = {
     children?: React.ReactNode;
-    variant: string;
+    variant?: string;
     location?: string;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     type?: "button" | "submit" | "reset";

@@ -1,52 +1,20 @@
-@use '../../assets/styles/abstract' as a;
-
 .button {
   display: block;
   width: max-content;
-  padding: 0.9rem 1.5rem;
-  font-weight: 700;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
   border: none;
-  border-radius: 1.75rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.15s;
-
-  &--wide {
-    padding: 0.9rem 2rem;
+  
+  &--full-width {
+    width: 100%;
   }
-
-  &--white {
-    color: a.$clr-primary-color-light-red;
-    background-color: a.$clr-neutral-white;
-    border: 1px solid a.$clr-neutral-white;
-
-    &:hover {
-      color: a.$clr-neutral-white;
-      background-color: a.$clr-primary-color-very-light-red;
-      border: 1px solid transparent;
-    }
-  }
-
-  &--transparent {
-    color: a.$clr-neutral-white;
-    background-color: transparent;
-    border: 1px solid a.$clr-neutral-white;
-
-    &:hover {
-      color: a.$clr-primary-color-very-light-red;
-      background-color: a.$clr-neutral-white;
-      border: 1px solid a.$clr-neutral-white;
-    }
-  }
-
-  &--gradient-red {
-    color: a.$clr-neutral-white;
-    background: a.$clr-gradient-red;
-    border: 1px solid a.$clr-neutral-white;
-
-    &:hover {
-      color: a.$clr-primary-color-very-light-red;
-      background-color: a.$clr-neutral-white;
-      border: 1px solid a.$clr-neutral-white;
-    }
+  
+  &--black {
+    color: $clr-white;
+    background-color: #21092F; // TODO: Change color to dark purple
   }
 }

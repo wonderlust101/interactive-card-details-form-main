@@ -1,0 +1,106 @@
+.credit-cards {
+  grid-area: 1/1 / 1/4;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 1rem 3rem;
+  background: url('/images/bg-main-mobile.png') no-repeat top center;
+  background-size: 100% 65%;
+
+  @include breakpoint(medium) {
+    grid-area: unset;
+    background: unset;
+    gap: 2.5rem;
+  }
+
+  &__front {
+    grid-area: 1/1;
+    align-self: flex-end;
+    position: relative;
+    z-index: 4;
+    width: 90%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      height: 100%;
+      width: 100%;
+      background: url('/images/card-logo.svg') no-repeat;
+      background-size: 20%;
+    }
+
+    @include breakpoint(medium) {
+      grid-area: unset;
+      width: 100%;
+      right: 4rem;
+    }
+  }
+
+  &__front-info {
+    display: grid;
+    gap: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.25rem;
+    color: $clr-white;
+  }
+
+  &__front-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__number {
+    @include breakpoint(medium) {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__name,
+  &__exp-date {
+    font-size: 0.5625rem;
+    letter-spacing: 0.08038rem;
+    color: $clr-white;
+    
+    @include breakpoint(medium) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &__back {
+    grid-area: 1/1;
+    align-self: flex-start;
+    justify-self: flex-end;
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    margin-bottom: 30%;
+
+    @include breakpoint(medium) {
+      grid-area: unset;
+      width: 100%;
+      margin-bottom: unset;
+      left: 4rem;
+    }
+  }
+
+  &__cvc {
+    position: absolute;
+    top: 49%;
+    right: 15%;
+    transform: translate(50%, -50%);
+    font-size: 0.5625rem;
+    letter-spacing: 0.08038rem;
+    color: $clr-white;
+
+    @include breakpoint(medium) {
+      font-size: 0.875rem;
+    }
+  }
+}

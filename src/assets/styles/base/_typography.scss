@@ -1,6 +1,11 @@
 @use '../abstract/index' as a;
 
 h1, h2, h3, h4,
-h5, h6, p {
+h5, h6, p, input, label, a, button {
+  font-family: "Space Grotesk", monospace;
+}
 
+label, p {
+  font-size: 1.125rem;
+  font-weight: 500;
 }

@@ -1,0 +1,52 @@
+.payment {
+  display: grid;
+  min-height: 100vh;
+
+  @include breakpoint(medium) {
+    background: url('/images/bg-main-desktop.png') no-repeat top left;
+    background-size: contain;
+  }
+  
+  &__content {
+    display: grid;
+    grid-area: 1 / 1 / 1 / 4;
+    grid-template-rows: max-content 1fr;
+    grid-template-columns: 1fr calc(100% - 1.5rem * 2) 1fr;
+
+    @include breakpoint(medium) {
+      grid-area: 1/2;
+      grid-template: 1fr / 1fr 1fr;
+      align-items: center;
+      column-gap: 8rem;
+    }
+  }
+
+  &__form {
+    grid-area: 2/2;
+    grid-template-rows: max-content max-content;
+    align-items: flex-start;
+    gap: 1.75rem;
+
+    @include breakpoint(medium) {
+      grid-area: unset;
+      gap: 2.5rem;
+    }
+  }
+
+  &__form-bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  &__form-exp-date {
+    display: grid;
+    grid-template:  repeat(2, max-content) / repeat(2, 1fr);
+    gap: 0.5rem;
+    color: #21092F;
+  }
+
+  &__form-exp-date-label {
+    grid-area: 1/1 / 1/3;
+  }
+}

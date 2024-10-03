@@ -1,0 +1,42 @@
+@use '../../../assets/styles/abstract' as a;
+
+.text-input {
+  display: grid;
+  gap: 0.5rem;
+
+  &__field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    //color: a.$clr-neutrals-white;
+    //background-color: a.$clr-primary-color-blue-500;
+    border-radius: 0.5rem;
+    border: 2px solid #DFDEE0; // TODO: Change color
+    outline: none !important;
+
+    &::placeholder {
+      color: #21092F; // TODO: Change color
+      opacity: 0.25;
+    }
+
+    &:focus {
+
+    }
+
+    &--error,
+    &--error:focus {
+
+    }
+  }
+  
+  &__label {
+    color: #21092F;
+  }
+
+  &__status {
+    text-align: left;
+    font-size: 0.75rem;
+
+  }
+}
